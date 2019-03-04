@@ -10,8 +10,6 @@ namespace opdracht_1
     {
         public IWeaponBehaviour weapon;
 
-
-
         public Character()
         {
             //default weapon
