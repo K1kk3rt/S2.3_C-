@@ -10,12 +10,22 @@ namespace opdracht_2
     {
         static void Main(string[] args)
         {
-            // The code provided will print ‘Hello World’ to the console.
-            // Press Ctrl+F5 (or go to Debug > Start Without Debugging) to run your app.
-            Console.WriteLine("Hello World!");
-            Console.ReadKey();
+            Program myProgram = new Program();
+            myProgram.Start();
+        }
 
-            // Go to http://aka.ms/dotnet-get-started-console to continue learning how to build a console app! 
+        void Start()
+        {
+            ATMMachine machine = new ATMMachine(2000);
+            machine.insertCard();
+            machine.rejectCard();
+            machine.insertCard();
+            machine.enterPincode(1234);
+            machine.withdrawCash(1500);
+            machine.insertCard();
+            machine.enterPincode(1234);
+            machine.withdrawCash(750);
+            Console.ReadKey();
         }
     }
 }

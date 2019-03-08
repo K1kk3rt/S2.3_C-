@@ -7,7 +7,7 @@
     <ProjectGuid>{5AC579CA-B8B5-42BB-906C-649304A79C15}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>opdracht_2</RootNamespace>
-    <AssemblyName>opdracht_2</AssemblyName>
+    <AssemblyName>opdracht 2</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,6 +42,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ATMMachine.cs" />
+    <Compile Include="CardPresentState.cs" />
+    <Compile Include="CorrectPinState.cs" />
+    <Compile Include="IATMState.cs" />
+    <Compile Include="NoCardState.cs" />
+    <Compile Include="NoCashState.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
