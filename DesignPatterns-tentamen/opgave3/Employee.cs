@@ -24,7 +24,9 @@ namespace opgave3
 
         public override string ToString()
         {
-            //string = "Employee " + Name + " (" + ") ";
+            string s = "Employee " + Name + " (" + Number + ") ";
+
+            return s;
         }
     }
 }

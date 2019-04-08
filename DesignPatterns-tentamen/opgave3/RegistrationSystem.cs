@@ -12,10 +12,14 @@ namespace opgave3
         private static RegistrationSystem UniqueInstance;
         private Dictionary<int, Employee> Employees;
 
+        private void setEmployee(Employee employee) { Employees.Add(employee.getNumber(), employee); }
+        private void RemoveEmployee(Employee employee) { Employees.Remove(employee.getNumber()); }
+
         //construct
         private RegistrationSystem()
         {
             NrOfClockedInEployees = 0;
+            Employees = new Dictionary<int, Employee>();
         }
 
         //methods
@@ -31,12 +35,31 @@ namespace opgave3
 
         public void ClockIn(Employee employee)
         {
-
+            if (Employees.ContainsKey(employee.getNumber()))
+            {
+                Console.WriteLine(Employees[employee.getNumber()].ToString() + "already clocked in.");
+            }
+            else
+            {
+                NrOfClockedInEployees++;
+                setEmployee(employee);
+                Console.WriteLine(Employees[employee.getNumber()].ToString() + "clocked in.");
+            }
+            
         }
 
         public void ClockOut(Employee employee)
         {
-
+            if (Employees.ContainsKey(employee.getNumber()))
+            {
+                Console.WriteLine(Employees[employee.getNumber()].ToString() + "clocked out.");
+                NrOfClockedInEployees--;
+                RemoveEmployee(employee);
+            }
+            else
+            {
+                Console.WriteLine(employee.ToString() + "not clocked in!");
+            }
         }
     }
 }
