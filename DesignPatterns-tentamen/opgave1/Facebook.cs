@@ -12,7 +12,7 @@ namespace opgave1
         private string Password;
 
         //construct
-        public Facebook(string username, string password) : base (username, password)
+        public Facebook(string username, string password)
         {
             Username = username;
             Password = password;

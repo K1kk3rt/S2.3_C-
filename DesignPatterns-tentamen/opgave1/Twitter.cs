@@ -12,7 +12,7 @@ namespace opgave1
         private string Password;
 
         //construct
-        public Twitter(string username, string password) : base(username, password)
+        public Twitter(string username, string password)
         {
             Username = username;
             Password = password;
